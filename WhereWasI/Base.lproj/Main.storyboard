@@ -22,14 +22,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MNb-jy-964">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="95" width="375" height="572"/>
                             </mapView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ve-tW-uem">
+                                <rect key="frame" x="0.0" y="20" width="375" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="8cy-EI-s4m"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Where Was I?" id="VGv-fD-S4O">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="6w6-qz-QIf">
+                                            <color key="tintColor" red="0.55206054449999997" green="0.070677973330000005" blue="0.25057768819999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="saveButtonClicked:" destination="BYZ-38-t0r" id="hf2-Qw-HfS"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="MNb-jy-964" secondAttribute="trailing" id="5tg-gf-CdQ"/>
+                            <constraint firstAttribute="trailing" secondItem="0Ve-tW-uem" secondAttribute="trailing" id="7jK-bW-Zat"/>
+                            <constraint firstItem="0Ve-tW-uem" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ACf-2R-1RU"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MNb-jy-964" secondAttribute="bottom" id="D9P-ge-V2u"/>
-                            <constraint firstItem="MNb-jy-964" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pam-IV-sSb"/>
+                            <constraint firstItem="MNb-jy-964" firstAttribute="top" secondItem="0Ve-tW-uem" secondAttribute="bottom" id="PKP-OV-c0M"/>
+                            <constraint firstItem="0Ve-tW-uem" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Y9K-eq-fSQ"/>
                             <constraint firstItem="MNb-jy-964" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rEp-hV-7pD"/>
                         </constraints>
                     </view>
@@ -39,7 +58,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="121" y="89"/>
+            <point key="canvasLocation" x="120.8" y="88.605697151424295"/>
         </scene>
     </scenes>
 </document>
