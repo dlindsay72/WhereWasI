@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MapVC.swift
 //  WhereWasI
 //
 //  Created by Dan Lindsay on 2017-01-31.
@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class MapVC: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -42,12 +42,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let coord = locationManager.location?.coordinate
         
         if let lat = coord?.latitude {
-            print("Latitude: \(lat)")
+            if let long = coord?.longitude {
+                DataStorage().storeDataPoint(latitude: String(lat), longitude: String(long))
+            }
         }
         
-        if let long = coord?.longitude {
-            print("Longitude: \(long)")
-        }
+        
     }
 
 }
