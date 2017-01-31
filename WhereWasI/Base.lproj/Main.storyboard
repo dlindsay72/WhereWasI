@@ -33,10 +33,13 @@
                             <constraint firstItem="MNb-jy-964" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rEp-hV-7pD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="MNb-jy-964" id="mHF-Se-pWE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+            <point key="canvasLocation" x="121" y="89"/>
         </scene>
     </scenes>
 </document>
